@@ -10,13 +10,13 @@ engine = create_engine("sqlite:///freelancer.db")
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Import models and enums to make them accessible 
+# Import models and enums to make them accessible h
 from .user import User
 from .client import Client
 from .job import Job, JobStatus
 from .payment import Payment, PaymentStatus
 
-# Create tables 
+# Create tables if they don't exist
 Base.metadata.create_all(engine)
 
 __all__ = [

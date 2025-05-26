@@ -16,7 +16,7 @@ from .client import Client
 from .job import Job, JobStatus
 from .payment import Payment, PaymentStatus
 
-# Create tables 
+# Create tables if they don't exist
 Base.metadata.create_all(engine)
 
 __all__ = [
