@@ -1,3 +1,5 @@
+# models/user.py
+
 from sqlalchemy import Column, Integer, String, Text, Date
 from sqlalchemy.orm import relationship
 from datetime import datetime
@@ -14,9 +16,9 @@ class User(Base):
     created_at = Column(Date, default=datetime.utcnow)
 
     jobs = relationship("Job", back_populates="user")
-    clients = relationship("Client", back_populates="user", cascade="all, delete-orphan")
 
-    def save(self, session):
+
+    def save(self):
         session.add(self)
         session.commit()
 

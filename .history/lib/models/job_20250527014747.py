@@ -10,7 +10,7 @@ class JobStatus(PyEnum):
     interviewed = "interviewed"
     hired = "hired"
     rejected = "rejected"
-    in_progress = "in_progress"
+    in_progress = "in progress"
     completed = "completed"
 
 class Job(Base):

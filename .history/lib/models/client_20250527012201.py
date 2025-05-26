@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, String, Text, ForeignKey
+# models/client.py
+
+from sqlalchemy import Column, Integer, String, Text, 
 from sqlalchemy.orm import relationship
 from . import Base
 
@@ -11,8 +13,8 @@ class Client(Base):
     company_name = Column(String)
     phone = Column(String)
     user_id = Column(Integer, ForeignKey('users.id'))
+    
 
-    user = relationship("User", back_populates="clients")
     jobs = relationship("Job", back_populates="client")
 
     def __repr__(self):

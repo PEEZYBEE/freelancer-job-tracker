@@ -10,7 +10,7 @@ class JobStatus(PyEnum):
     interviewed = "interviewed"
     hired = "hired"
     rejected = "rejected"
-    in_progress = "in_progress"
+    in_progress = "In Progress"
     completed = "completed"
 
 class Job(Base):
@@ -25,8 +25,8 @@ class Job(Base):
     hours_estimate = Column(Float)
     platform = Column(String)
     applied_date = Column(Date)
-    status = Column(Enum(JobStatus), default=JobStatus.applied)
-
+    
+    
     user = relationship("User", back_populates="jobs")
     client = relationship("Client", back_populates="jobs")
     payments = relationship("Payment", back_populates="job")
