@@ -1,3 +1,5 @@
+# models/job.py
+
 from sqlalchemy import Column, Integer, String, Text, Date, ForeignKey, Enum,Float
 from sqlalchemy.orm import relationship
 from enum import Enum as PyEnum

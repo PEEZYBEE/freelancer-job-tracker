@@ -14,7 +14,8 @@ from .client import Client
 from .job import Job, JobStatus
 from .payment import Payment, PaymentStatus
 
-
+# Create tables 
+Base.metadata.create_all(engine)
 
 __all__ = [
     'Base', 'engine', 'Session', 'session',
