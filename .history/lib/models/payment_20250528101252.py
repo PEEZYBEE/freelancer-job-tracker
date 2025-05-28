@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, ForeignKey, DECIMAL, Date, Enum, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func  
 from enum import Enum as PyEnum
-from .base import Base
+from lib.models import Base
 
 class PaymentStatus(PyEnum):
     pending = "pending"

@@ -3,7 +3,7 @@ from .base import Base
 from sqlalchemy.orm import sessionmaker
 
 # Setup SQLAlchemy base, engine, and session
-
+Base = declarative_base()
 engine = create_engine("sqlite:///freelancer.db")
 Session = sessionmaker(bind=engine)
 session = Session()
